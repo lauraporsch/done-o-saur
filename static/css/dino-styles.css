@@ -7,7 +7,7 @@ body {
 
 
 footer {
-    background-color: #EEF2E6;
+    background-color: #D6CDA4;
     bottom: 0;
     font-size: 15px;
     padding: 45px 0 25px;
@@ -22,12 +22,12 @@ form {
 }
 
 h1 {
-    background: white;
+    background: #EEF2E6;
     font-weight: 700;
 }
 
 table {
-    background: white;
+    background: #EEF2E6;
     margin: 20px 20px;
     width: 50%
 }
@@ -88,7 +88,7 @@ th, td {
 }
 
 .navbar {
-    background-color: #EEF2E6;
+    background-color: #D6CDA4;
     margin-bottom: 0px;
 }
 
