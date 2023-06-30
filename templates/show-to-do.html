@@ -1,0 +1,28 @@
+<!--SHOW ALL INFORMATION ABOUT THE REQUESTED TO DO-->
+{% include "header.html" %}
+
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+    <table>
+        <tbody>
+            <tr>
+                <th>{{to_do.name}}</th>
+                <th>{{ to_do.parent_category }}</th>
+                <th>{{ to_do.due_date }}</th>
+                <th><a href="{{ url_for('mark_done', to_do_id=to_do.id) }}">✅</a></th>
+                <th><a href="{{ url_for('delete', to_do_id=to_do.id) }}">❌</a></th>
+            </tr>
+<!--            {% for to_do in all_to_dos %}-->
+<!--            <tr>-->
+<!--                <td><a href="{{ url_for('show_to_do', to_do_id=to_do.id) }}">{{ to_do.name }}</a></td>-->
+<!--                <td><a href="" >{{ to_do.category }}</a></td>-->
+<!--                <td>{{ to_do.due_date }}</td>-->
+<!--            </tr>-->
+<!--            {% endfor %}-->
+        </tbody>
+    </table>
+    </div>
+  </div>
+
+{% include "attribution.html" %}
+{% include "footer.html" %}

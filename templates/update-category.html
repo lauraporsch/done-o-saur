@@ -1,0 +1,20 @@
+<!--UPDATE CATEGORY IN DATABASE VIA INPUT IN WTFORM-->
+<!--add Bootstrap templates-->
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+<!--blocks CSS from Bootstrap templates above, so that it uses css template for Styling-->
+{% block content %}
+{% include "header.html" %}
+<h1>Update {{ category.name }}</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 mx-auto">
+              <!-- adds the CategoryForm, turns off browser default validation messages-->
+             {{ wtf.quick_form(form, novalidate = True) }}
+        </div>
+      </div>
+    </div>
+
+{% include "attribution.html" %}
+{% include "footer.html" %}
+{% endblock %}
