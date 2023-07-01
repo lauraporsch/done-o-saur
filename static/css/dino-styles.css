@@ -72,6 +72,12 @@ th, td {
     color: #3D8361;
 }
 
+.flashes {
+   background-color: #EEF2E6;
+   color: red;
+   font-style: italic bold;
+}
+
 .form-control {
     font-size: 15px;
 }
@@ -89,8 +95,12 @@ th, td {
 
 .navbar {
     background-color: #D6CDA4;
+    border: 0px;
+    border-radius: 0px;
     margin-bottom: 0px;
+    padding: 5px 10px;
 }
+
 
 .nav-link {
     color: black;

@@ -12,15 +12,20 @@
                 <th><a href="{{ url_for('mark_done', to_do_id=to_do.id) }}">✅</a></th>
                 <th><a href="{{ url_for('delete', to_do_id=to_do.id) }}">❌</a></th>
             </tr>
-<!--            {% for to_do in all_to_dos %}-->
-<!--            <tr>-->
-<!--                <td><a href="{{ url_for('show_to_do', to_do_id=to_do.id) }}">{{ to_do.name }}</a></td>-->
-<!--                <td><a href="" >{{ to_do.category }}</a></td>-->
-<!--                <td>{{ to_do.due_date }}</td>-->
-<!--            </tr>-->
-<!--            {% endfor %}-->
+            {% for subtask in to_do.subtasks %}
+            <tr>
+                <td>{{ subtask.name }}</td>
+                <td>{{ subtask.category }}</td>
+                <td>{{ subtask.due_date }}</td>
+                <td><a href="{{ url_for('mark_done_sub', subtask_id=subtask.id) }}">✅</a></td>
+                <td><a href="{{ url_for('delete_sub', subtask_id=subtask.id) }}">❌</a></td>
+            </tr>
+            {% endfor %}
         </tbody>
     </table>
+    </div>
+    <div class="col-lg-6 col-md-6 mx-auto text-center">
+        <a class="btn btn-primary" href="{{ url_for('add_new_subtask', to_do_id=to_do.id) }}">New Subtask</a>
     </div>
   </div>
 
