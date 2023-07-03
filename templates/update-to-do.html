@@ -1,21 +1,15 @@
-<!--ADD A NEW SUBTASK TO A TO DO IN THE DATABASE VIA INPUT IN WTFORM-->
+<!--UPDATE TO DO IN DATABASE VIA INPUT IN WTFORM-->
 <!--add Bootstrap templates-->
 {% extends 'bootstrap/base.html' %}
 {% import 'bootstrap/wtf.html' as wtf %}
 <!--blocks CSS from Bootstrap templates above, so that it uses css template for Styling-->
 {% block content %}
 {% include "header.html" %}
-{% with messages = get_flashed_messages() %}
-    {% if messages: %}
-      {% for message in messages: %}
-        <p class="flashes">{{ message }}</p>
-      {% endfor %}
-    {% endif %}
-{% endwith %}
+<h1>Update {{ to_do.name }}</h1>
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6 mx-auto">
-              <!-- adds the SubTaskForm, turns off browser default validation messages-->
+              <!-- adds the UpdateToDoForm, turns off browser default validation messages-->
              {{ wtf.quick_form(form, novalidate = True) }}
         </div>
       </div>

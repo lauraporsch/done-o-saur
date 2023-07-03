@@ -10,7 +10,7 @@
                 <th>Category</th>
                 <th>Finish Date</th>
             </tr>
-            {% for got_done in all_got_dones %}
+            {% for got_done in all_got_dones: %}
             <tr>
                 <td>{{ got_done.name }}</td>
                 <td>{{ got_done.category }}</td>
@@ -19,6 +19,11 @@
             {% endfor %}
         </tbody>
     </table>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 mx-auto text-center">
+            <a class="btn btn-primary" href="{{ url_for('clear_got_done') }}">Clear Got Dones</a>
+        </div>
     </div>
 </div>
 
