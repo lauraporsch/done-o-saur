@@ -1,21 +1,21 @@
 # done-o-saur
 Website that enables User to set and track To Dos in different Categories. Built with Flask-Framework.
 
-CRUD-Functions:
-CREATE:
+## CRUD-Functions:
+### CREATE:
 - Categories
 - To Dos with due date in Categories
 - Subtasks with seperate due date to To Dos
-READ:
+### READ:
 - All Categories
 - All To Dos (sorted ascending by due date)
 - Each To Do including Subtasks
 - All Got Dones
-UPDATE:
+### UPDATE:
 - Name of Category
 - Name, category and due date of To Dos and all relational Subtasks
 - Mark To Dos and Subtasks as done (automatically creates new entry in DB for GotDones)
-DELETE:
+### DELETE:
 - To Dos and all relational Subtasks (after warning)
 - Single Subtasks
 - All GotDones
@@ -36,3 +36,5 @@ Example for To Do with Subtasks
 Example for Got Done List
 ![image](https://github.com/lauraporsch/done-o-saur/assets/127047376/a50fade2-3218-4657-8099-5545eae2a863)
 
+Example for adding a new To Do
+![image](https://github.com/lauraporsch/done-o-saur/assets/127047376/2414ca5c-f23b-45e4-88ec-0952e7530135)
